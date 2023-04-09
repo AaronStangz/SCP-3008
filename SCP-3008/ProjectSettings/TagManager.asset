@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Moveable
   - Map
+  - Trash
+  - Craft
   layers:
   - Default
   - TransparentFX

@@ -44,11 +44,11 @@ public class Lights : MonoBehaviour
     void OnTriggerStay(Collider collision)
     {
         
-        if (collision.gameObject.CompareTag("Sleep"))
-        {
-            sleep();
-
-        }
+       // if (collision.gameObject.CompareTag("Sleep"))
+       // {
+       //     sleep();
+       //
+       // }
     }
 
 
