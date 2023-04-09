@@ -52,12 +52,12 @@ public class Pickup : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            holdParent.rotation *= Quaternion.Euler(0, 1, 0);
+            holdParent.rotation *= Quaternion.Euler(0, 2, 0);
         }
 
         if (Input.GetMouseButton(1))
         {
-            holdParent.rotation *= Quaternion.Euler(1, 0, 0);
+            holdParent.rotation *= Quaternion.Euler(2, 0, 0);
 
         }
 

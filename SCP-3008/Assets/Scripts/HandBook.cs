@@ -8,36 +8,47 @@ public class HandBook : MonoBehaviour
 {
     public GameObject handBook;
     public GameObject puaseMenu;
+    public GameObject crafting;
+
+    public GameObject player;
+
     public GameObject metalText;
     public int metalCount;
     public GameObject woodText;
     public int woodCount;
     public GameObject clothText;
     public int clothCount;
+    public GameObject paperText;
+    public int paperCount;
 
-    void Open()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            puaseMenu.SetActive(false);
-            handBook.SetActive(true);
-            Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.None;
-            metalText.GetComponent<TextMeshProUGUI>().text = "( " + metalCount + " )";
-            woodText.GetComponent<TextMeshProUGUI>().text = "( " + woodCount + " )";
-            clothText.GetComponent<TextMeshProUGUI>().text = "( " + clothCount + " )";
+            handBook.SetActive(true);
+            player.GetComponent<puase>().isMenuOpen = true;
+            metalText.GetComponent<TextMeshProUGUI>().text = "Metal: " + metalCount;
+            woodText.GetComponent<TextMeshProUGUI>().text = "Wood: " + woodCount;
+            clothText.GetComponent<TextMeshProUGUI>().text = "Cloth: " + clothCount;
+            paperText.GetComponent<TextMeshProUGUI>().text = "Paper: " + paperCount;
 
         }
-    }
-    void Update()
-    {
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Time.timeScale = 1f;
-            handBook.SetActive(false);
-            puaseMenu.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
+            player.GetComponent<puase>().isMenuOpen = true;
         }
+
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            crafting.SetActive(false);
+            handBook.SetActive(false);
+        }
+
+
     }
+
+
 }

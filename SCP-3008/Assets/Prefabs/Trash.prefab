@@ -655,9 +655,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a26f3c07a5916a4396ab8ad52138ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Metal: 10
+  Metal: 5
   Wood: 0
   Cloth: 0
+  paper: 28
 --- !u!1 &5711610920557945301
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,7 +880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b4218c896c3859649b8a3ec81022dd9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.16133255
+      value: -0.094
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b4218c896c3859649b8a3ec81022dd9b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -887,7 +888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b4218c896c3859649b8a3ec81022dd9b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.627
+      value: -0.291
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b4218c896c3859649b8a3ec81022dd9b, type: 3}
       propertyPath: m_LocalRotation.w

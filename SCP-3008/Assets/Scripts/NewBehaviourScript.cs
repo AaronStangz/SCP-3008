@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject player;
+    public GameObject wall;
 
-    // Update is called once per frame
-    void Update()
+    public void Wall()
     {
-        
+        Debug.Log("placed");
+        Instantiate(wall);
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        player.GetComponent<puase>().isMenuOpen = false;
     }
 }
