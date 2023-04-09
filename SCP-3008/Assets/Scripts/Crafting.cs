@@ -54,7 +54,7 @@ public class Crafting: MonoBehaviour
     }
 
 
-    void Update()
+    void LateUpdate()
     {
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -65,19 +65,19 @@ public class Crafting: MonoBehaviour
             player.GetComponent<puase>().isMenuOpen = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-             Counts();
-             if (paperCount.paperCount > 1)
-             {
-                Debug.Log("placed");
-                Instantiate(wall);
-                Time.timeScale = 1f;
-                Cursor.lockState = CursorLockMode.Locked;
-                player.GetComponent<puase>().isMenuOpen = false;
-                paperCount.paperCount -= 10;
-             }
-        }
+      //  if (Input.GetKeyDown(KeyCode.Alpha1))
+      //  {
+      //       Counts();
+      //       if (paperCount.paperCount > 1)
+    //         {
+     //           Debug.Log("placed");
+      //          Instantiate(wall);
+     //           Time.timeScale = 1f;
+    //            Cursor.lockState = CursorLockMode.Locked;
+     //           player.GetComponent<puase>().isMenuOpen = false;
+      //          paperCount.paperCount -= 10;
+     //        }
+     //   }
     }
 
     void Counts()

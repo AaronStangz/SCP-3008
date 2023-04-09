@@ -25,12 +25,12 @@ public class puase : MonoBehaviour
             }
 
         }
-        if (Input.GetMouseButton(0))
-        {
-            Time.timeScale = 1f;
-            puaseMenu.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
-        }
+        //if (Input.GetMouseButton(0))
+      //  {
+     //       Time.timeScale = 1f;
+      //      puaseMenu.SetActive(false);
+     //       Cursor.lockState = CursorLockMode.Locked;
+     //   }
     }
    
 }

@@ -10,10 +10,12 @@ public class Drops : MonoBehaviour
     HandBook woodCount;
     HandBook clothCount;
     HandBook paperCount;
+    HandBook nailCount;
     public int Metal;
     public int Wood;
     public int Cloth;
     public int paper;
+    public int nail;
 
     GameObject player;
 
@@ -24,6 +26,7 @@ public class Drops : MonoBehaviour
         woodCount = player.GetComponent<HandBook>();
         clothCount = player.GetComponent<HandBook>();
         paperCount = player.GetComponent<HandBook>();
+        nailCount = player.GetComponent<HandBook>();
     }
     void OnTriggerStay(Collider collision)
     {
@@ -42,6 +45,7 @@ public class Drops : MonoBehaviour
             woodCount.woodCount += Wood;
             clothCount.clothCount += Cloth;
             paperCount.paperCount += paper;
+            nailCount.nailCount += nail;
             Destroy(gameObject);
         }
     }

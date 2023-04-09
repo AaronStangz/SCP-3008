@@ -656,9 +656,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Metal: 5
-  Wood: 0
+  Wood: 5
   Cloth: 0
   paper: 28
+  nail: 0
 --- !u!1 &5711610920557945301
 GameObject:
   m_ObjectHideFlags: 0
