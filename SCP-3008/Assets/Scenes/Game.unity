@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 261.8469, g: 324.39908, b: 429.33423, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Scrap Wall '
+  m_text: Scrap Window
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0eba05f45c723374bb4806ef3fc47d51, type: 2}
   m_sharedMaterial: {fileID: -4679711192789639919, guid: 0eba05f45c723374bb4806ef3fc47d51, type: 2}
@@ -1307,7 +1307,7 @@ GameObject:
   - component: {fileID: 1009551103}
   - component: {fileID: 1009551102}
   m_Layer: 5
-  m_Name: Scrap Wall (1)
+  m_Name: Scrap Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1381,7 +1381,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 640382112849019672}
         m_TargetAssemblyTypeName: HandBook, Assembly-CSharp
-        m_MethodName: Wall
+        m_MethodName: ScrapDoor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1757,7 +1757,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Scrap Wall '
+  m_text: Scrap Door
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0eba05f45c723374bb4806ef3fc47d51, type: 2}
   m_sharedMaterial: {fileID: -4679711192789639919, guid: 0eba05f45c723374bb4806ef3fc47d51, type: 2}
@@ -2170,7 +2170,7 @@ GameObject:
   - component: {fileID: 1520459730}
   - component: {fileID: 1520459729}
   m_Layer: 5
-  m_Name: Scrap Wall (2)
+  m_Name: Scrap Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2244,7 +2244,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 640382112849019672}
         m_TargetAssemblyTypeName: HandBook, Assembly-CSharp
-        m_MethodName: Wall
+        m_MethodName: ScrapWindow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3361,7 +3361,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 640382112849019672}
         m_TargetAssemblyTypeName: HandBook, Assembly-CSharp
-        m_MethodName: Wall
+        m_MethodName: ScrapWall
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3476,7 +3476,6 @@ GameObject:
   - component: {fileID: 640382112849019665}
   - component: {fileID: 640382112849019669}
   - component: {fileID: 640382112849019672}
-  - component: {fileID: 640382112849019673}
   - component: {fileID: 640382112849019674}
   m_Layer: 6
   m_Name: Player
@@ -3550,8 +3549,12 @@ MonoBehaviour:
   crafting: {fileID: 1930230306}
   player: {fileID: 640382112849019666}
   cam: {fileID: 640382113665081939}
-  wall: {fileID: 6431598140038397324, guid: eda60b29eab78c94b86bde2b6b68b06b, type: 3}
-  wallText: {fileID: 1056305331}
+  scrapwall: {fileID: 6431598140038397324, guid: eda60b29eab78c94b86bde2b6b68b06b, type: 3}
+  scrapwallText: {fileID: 610355435}
+  scrapdoor: {fileID: 8388549097004224926, guid: 2a47d90ed9eacf04bb7b6430de3f1bb0, type: 3}
+  scrapdoorText: {fileID: 1997057179}
+  scrapwindow: {fileID: 7223135620768138705, guid: 0ee2fe6e35c3308419030eb5768e1f0e, type: 3}
+  scrapwindowText: {fileID: 1056305331}
   paperToWoodText: {fileID: 610355435}
   netalToNailsText: {fileID: 1680537745}
   metalText: {fileID: 1283823049}
@@ -3564,19 +3567,6 @@ MonoBehaviour:
   paperCount: 0
   nailText: {fileID: 1020169078}
   nailCount: 0
---- !u!65 &640382112849019673
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640382112849019666}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 5, z: 5}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &640382112849019674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3898,7 +3888,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7e6b6a154cd59634b8e06a92e338ba2c, type: 2}
+  - {fileID: -876546973899608171, guid: badf92af2e7b70d4ca445a3e8d79e220, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

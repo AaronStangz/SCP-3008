@@ -49,4 +49,6 @@ public class Drops : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
 }

@@ -5,13 +5,7 @@ using UnityEngine.UI;
 
 public class BluePrint : MonoBehaviour
 {
-    Vector3 movePoint;
     public GameObject prefab;
-
-    HandBook metalCount;
-    HandBook woodCount;
-    HandBook clothCount;
-    HandBook paperCount;
 
     [SerializeField] private LayerMask layerMask;
 

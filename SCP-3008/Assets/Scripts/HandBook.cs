@@ -17,8 +17,12 @@ public class HandBook : MonoBehaviour
     private PlayerCam cam;
 
     [Header("Building")]
-    public GameObject wall;
-    public GameObject wallText;
+    public GameObject scrapwall;
+    public GameObject scrapwallText;
+    public GameObject scrapdoor;
+    public GameObject scrapdoorText;
+    public GameObject scrapwindow;
+    public GameObject scrapwindowText;
 
 
     [Header("Crafting")]
@@ -69,12 +73,44 @@ public class HandBook : MonoBehaviour
         }
     }
 
-    public void Wall()
+    public void ScrapWall()
     {
         if (woodCount > 5 && nailCount > 10)
         {
             Debug.Log("placed");
-            Instantiate(wall);
+            Instantiate(scrapwall);
+            Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.Locked;
+            woodCount -= 5;
+            nailCount -= 10;
+            cam.enabled = true;
+            player.GetComponent<puase>().isMenuOpen = true;
+            handBook.SetActive(false);
+        }
+    }
+
+    public void ScrapDoor()
+    {
+        if (woodCount > 5 && nailCount > 10)
+        {
+            Debug.Log("placed");
+            Instantiate(scrapdoor);
+            Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.Locked;
+            woodCount -= 5;
+            nailCount -= 10;
+            cam.enabled = true;
+            player.GetComponent<puase>().isMenuOpen = true;
+            handBook.SetActive(false);
+        }
+    }
+
+    public void ScrapWindow()
+    {
+        if (woodCount > 5 && nailCount > 10)
+        {
+            Debug.Log("placed");
+            Instantiate(scrapwindow);
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
             woodCount -= 5;
@@ -97,7 +133,9 @@ public class HandBook : MonoBehaviour
 
     void TextUpdate()
     {
-        wallText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 5 )" + "( Nails: " + nailCount + " / 10 )";
+        scrapwallText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 5 )" + "( Nails: " + nailCount + " / 10 )";
+        scrapdoorText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 5 )" + "( Nails: " + nailCount + " / 10 )";
+        scrapwindowText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 5 )" + "( Nails: " + nailCount + " / 10 )";
 
         netalToNailsText.GetComponent<TextMeshProUGUI>().text = "( Metal: " + metalCount + " / 1 )";
         paperToWoodText.GetComponent<TextMeshProUGUI>().text = "( Paper: " + paperCount + " / 10 )";
