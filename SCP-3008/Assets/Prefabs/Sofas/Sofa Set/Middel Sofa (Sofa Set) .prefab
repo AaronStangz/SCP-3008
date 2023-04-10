@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3376985890534227591}
   - component: {fileID: 4569339914064054074}
   - component: {fileID: 7569681628126035978}
+  - component: {fileID: 10166396871821443}
+  - component: {fileID: 2529488566708581963}
   m_Layer: 3
   m_Name: 'Middel Sofa (Sofa Set) '
   m_TagString: Moveable
@@ -71,6 +73,36 @@ LODGroup:
     - renderer: {fileID: 5577216026139481030}
     - renderer: {fileID: 3741515823213957215}
   m_Enabled: 1
+--- !u!114 &10166396871821443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417943827071809767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b74396002e72941aa2829b83312363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Metal: 2
+  Wood: 5
+  Cloth: 0
+  paper: 0
+  nail: 4
+--- !u!65 &2529488566708581963
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417943827071809767}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8294947, y: 1.9584655, z: 3.0541894}
+  m_Center: {x: 0.05837953, y: 0.47923285, z: -0.24638069}
 --- !u!1 &3022722582860331058
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3022722583265368074}
   m_LocalRotation: {x: 0.00000005960465, y: 0.000000094830405, z: 0.000000010536724, w: 1}
-  m_LocalPosition: {x: 0.000019993782, y: 0.009309996, z: 0.0060199974}
+  m_LocalPosition: {x: 0.000019993782, y: 0.00844, z: 0.00602}
   m_LocalScale: {x: 0.019383457, y: 0.0036192995, z: 0.011115502}
   m_ConstrainProportionsScale: 0
   m_Children: []

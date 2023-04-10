@@ -1,26 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
-
-public class Drops : MonoBehaviour
+public class Axe : MonoBehaviour
 {
     HandBook metalCount;
     HandBook woodCount;
     HandBook clothCount;
     HandBook paperCount;
     HandBook nailCount;
-    [Header("How Much To Give")]
+    GameObject player;
+
+    [Header("Give To Player")]
     public int Metal;
     public int Wood;
     public int Cloth;
     public int paper;
     public int nail;
 
-    GameObject player;
-
-    void Start()
+    public void Start()
     {
         player = GameObject.Find("Player");
         metalCount = player.GetComponent<HandBook>();
@@ -31,25 +30,19 @@ public class Drops : MonoBehaviour
     }
     void OnTriggerStay(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Axe"))
         {
-            trash();
+            if (Input.GetMouseButtonDown(0))
+            {
+                metalCount.metalCount += Metal;
+                woodCount.woodCount += Wood;
+                clothCount.clothCount += Cloth;
+                paperCount.paperCount += paper;
+                nailCount.nailCount += nail;
+                Destroy(gameObject);
+            }
         }
 
     }
-
-    void trash()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            metalCount.metalCount += Metal;
-            woodCount.woodCount += Wood;
-            clothCount.clothCount += Cloth;
-            paperCount.paperCount += paper;
-            nailCount.nailCount += nail;
-            Destroy(gameObject);
-        }
-    }
-
-
+   
 }

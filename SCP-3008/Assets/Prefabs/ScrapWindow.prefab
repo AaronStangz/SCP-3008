@@ -107,8 +107,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2071692978204430144}
-  - component: {fileID: 2274503880815938356}
   - component: {fileID: 5134076679600065383}
+  - component: {fileID: 5150844361975621587}
+  - component: {fileID: 2873779516924945290}
   m_Layer: 3
   m_Name: ScrapWindow
   m_TagString: Untagged
@@ -132,24 +133,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2274503880815938356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071692978204430145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dccb1b00d5c07b7459cc10eb72e5320c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  upgradedPrefab: {fileID: 6785386761588952338, guid: f722e516ebc32bc4d912e952d4988663, type: 3}
-  oldPrefab: {fileID: 1017393579107807558}
-  countName1: 0
-  countNub1: 0
-  countName2: 0
-  countNub2: 0
 --- !u!65 &5134076679600065383
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -163,3 +146,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.67740345, y: 4.324311, z: 4.00632}
   m_Center: {x: 0.015853107, y: 2.1272147, z: -0.0012806155}
+--- !u!205 &5150844361975621587
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071692978204430145}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 2.0000002, z: 0.107157946}
+  m_Size: 4.63531
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.02209661
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1521792683097739411}
+  m_Enabled: 1
+--- !u!114 &2873779516924945290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071692978204430145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b74396002e72941aa2829b83312363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Metal: 0
+  Wood: 23
+  Cloth: 0
+  paper: 0
+  nail: 46

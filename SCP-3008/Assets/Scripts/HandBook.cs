@@ -16,7 +16,7 @@ public class HandBook : MonoBehaviour
     [SerializeField]
     private PlayerCam cam;
 
-    [Header("Building")]
+    [Header("Scrap Building")]
     public GameObject scrapwall;
     public GameObject scrapwallText;
     public GameObject scrapdoor;
@@ -24,10 +24,27 @@ public class HandBook : MonoBehaviour
     public GameObject scrapwindow;
     public GameObject scrapwindowText;
 
+    [Header("Wood Building")]
+    public GameObject woodwall;
+    public GameObject woodwallText;
+    public GameObject wooddoor;
+    public GameObject wooddoorText;
+    public GameObject woodwindow;
+    public GameObject woodwindowText;
+
+    [Header("Pages")]
+    public GameObject Page1;
+    public GameObject Page2;
 
     [Header("Crafting")]
     public GameObject paperToWoodText;
     public GameObject netalToNailsText;
+    public GameObject craftingAxeText;
+
+    [Header("Items")]
+    public GameObject axeButton;
+    public GameObject axe;
+
 
     [Header("Mats")]
     public GameObject metalText;
@@ -63,19 +80,10 @@ public class HandBook : MonoBehaviour
         }
     }
 
-    public void MetalToNails()
-    {
-        if (metalCount > 1)
-        {
-            Debug.Log("MetalToNails");
-            metalCount -= 1;
-            nailCount += 2;
-        }
-    }
 
     public void ScrapWall()
     {
-        if (woodCount > 5 && nailCount > 10)
+        if (woodCount >= 5 && nailCount >= 10)
         {
             Debug.Log("placed");
             Instantiate(scrapwall);
@@ -91,7 +99,7 @@ public class HandBook : MonoBehaviour
 
     public void ScrapDoor()
     {
-        if (woodCount > 5 && nailCount > 10)
+        if (woodCount >= 5 && nailCount >= 10)
         {
             Debug.Log("placed");
             Instantiate(scrapdoor);
@@ -107,7 +115,7 @@ public class HandBook : MonoBehaviour
 
     public void ScrapWindow()
     {
-        if (woodCount > 5 && nailCount > 10)
+        if (woodCount >= 5 && nailCount >= 10)
         {
             Debug.Log("placed");
             Instantiate(scrapwindow);
@@ -121,9 +129,66 @@ public class HandBook : MonoBehaviour
         }
     }
 
+    public void WoodWall()
+    {
+        if (woodCount >= 10 && nailCount >= 20)
+        {
+            Debug.Log("placed");
+            Instantiate(woodwall);
+            Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.Locked;
+            woodCount -= 5;
+            nailCount -= 10;
+            cam.enabled = true;
+            player.GetComponent<puase>().isMenuOpen = true;
+            handBook.SetActive(false);
+        }
+    }
+
+    public void WallDoor()
+    {
+        if (woodCount >= 10 && nailCount >= 20)
+        {
+            Debug.Log("placed");
+            Instantiate(wooddoor);
+            Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.Locked;
+            woodCount -= 5;
+            nailCount -= 10;
+            cam.enabled = true;
+            player.GetComponent<puase>().isMenuOpen = true;
+            handBook.SetActive(false);
+        }
+    }
+
+    public void WallWindow()
+    {
+        if (woodCount >= 10 && nailCount >= 20)
+        {
+            Debug.Log("placed");
+            Instantiate(woodwindow);
+            Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.Locked;
+            woodCount -= 5;
+            nailCount -= 10;
+            cam.enabled = true;
+            player.GetComponent<puase>().isMenuOpen = true;
+            handBook.SetActive(false);
+        }
+    }
+    public void MetalToNails()
+    {
+        if (metalCount >= 1)
+        {
+            Debug.Log("MetalToNails");
+            metalCount -= 1;
+            nailCount += 2;
+        }
+    }
+
     public void PaperToWood()
     {
-        if (paperCount > 10)
+        if (paperCount >= 10)
         {
             Debug.Log("PaperToWood");
             paperCount -= 10;
@@ -131,14 +196,35 @@ public class HandBook : MonoBehaviour
         }
     }
 
+    public void CraftAxe()
+    {
+        if (metalCount >= 5 && woodCount >= 2 && nailCount >= 4)
+        {
+            Debug.Log("CraftingAxe");
+            axeButton.SetActive(true);
+            NextPage2();
+
+
+        }
+    }
+
+    public void Axe()
+    {
+        axe.SetActive(true);
+    }
+
     void TextUpdate()
     {
         scrapwallText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 5 )" + "( Nails: " + nailCount + " / 10 )";
         scrapdoorText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 5 )" + "( Nails: " + nailCount + " / 10 )";
         scrapwindowText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 5 )" + "( Nails: " + nailCount + " / 10 )";
+        woodwallText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 10 )" + "( Nails: " + nailCount + " / 20 )";
+        wooddoorText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 10 )" + "( Nails: " + nailCount + " / 20 )";
+        woodwindowText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 10 )" + "( Nails: " + nailCount + " / 20 )";
 
         netalToNailsText.GetComponent<TextMeshProUGUI>().text = "( Metal: " + metalCount + " / 1 )";
         paperToWoodText.GetComponent<TextMeshProUGUI>().text = "( Paper: " + paperCount + " / 10 )";
+        craftingAxeText.GetComponent<TextMeshProUGUI>().text = "( Metal: " + metalCount + " / 5 )" + "( Wood: " + woodCount + " / 5 )" + "( Nails: " + nailCount + " / 4 )";
 
         metalText.GetComponent<TextMeshProUGUI>().text = "Metal: " + metalCount;
         woodText.GetComponent<TextMeshProUGUI>().text = "Wood: " + woodCount;
@@ -161,5 +247,15 @@ public class HandBook : MonoBehaviour
             crafting.SetActive(false);
             handBook.SetActive(false);
         }
+    }
+    public void NextPage1()
+    {
+        Page1.SetActive(false);
+        Page2.SetActive(true);
+    }
+    public void NextPage2()
+    {
+        Page1.SetActive(true);
+        Page2.SetActive(false);
     }
 }

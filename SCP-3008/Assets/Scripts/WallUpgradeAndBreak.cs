@@ -1,6 +1,8 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class WallUpgradeAndBreak : MonoBehaviour
 {
@@ -9,16 +11,34 @@ public class WallUpgradeAndBreak : MonoBehaviour
     HandBook clothCount;
     HandBook paperCount;
     HandBook nailCount;
-
+    [Header("GameObject")]
     public GameObject upgradedPrefab;
     public GameObject oldPrefab;
-
-    public float countName1;
-    public float countNub1;
-    public float countName2;
-    public float countNub2;
-
     GameObject player;
+
+    [Header("How Much it Takes")]
+    public int Metal;
+    public int Wood;
+    public int Cloth;
+    public int paper;
+    public int nail;
+
+    [Header("Need To Upgrade")]
+    public int NMetal;
+    public int NWood;
+    public int NCloth;
+    public int Npaper;
+    public int Nnail;
+
+    [Header("Give To Player")]
+    public int GMetal;
+    public int GWood;
+    public int GCloth;
+    public int Gpaper;
+    public int Gnail;
+
+
+
 
     void Start()
     {
@@ -34,25 +54,16 @@ public class WallUpgradeAndBreak : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.U))
-            {
-                Destroy(oldPrefab);
-                Instantiate(upgradedPrefab, transform.position, transform.rotation);
-
-                if ( countName1 > countNub1 && countName2 > countNub2)
+                if (metalCount.metalCount >= NMetal && woodCount.woodCount >= NWood && clothCount.clothCount >= NCloth && paperCount.paperCount >= Npaper && nailCount.nailCount >= Nnail)
                 {
-                    countName1 -= countNub1;
-                    countName2 -= countNub2;
+                    metalCount.metalCount -= Metal;
+                    woodCount.woodCount -= Wood;
+                    clothCount.clothCount -= Cloth;
+                    paperCount.paperCount -= paper;
+                    nailCount.nailCount -= nail;
                     Destroy(oldPrefab);
-                    Instantiate(upgradedPrefab);
-
+                    Instantiate(upgradedPrefab, transform.position, transform.rotation);
                 }
-            }
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                Destroy(oldPrefab);
-            }
         }
     }
-
 }

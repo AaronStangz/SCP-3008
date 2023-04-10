@@ -387,6 +387,8 @@ GameObject:
   - component: {fileID: 1977459134610340224}
   - component: {fileID: -3683527346504526438}
   - component: {fileID: 6071357905264584209}
+  - component: {fileID: 3016025498493176475}
+  - component: {fileID: 6583259215863411490}
   m_Layer: 3
   m_Name: End Sofa (Sofa Set)
   m_TagString: Moveable
@@ -448,6 +450,36 @@ LODGroup:
     - renderer: {fileID: 4412874083428341461}
     - renderer: {fileID: 2310593027456553737}
   m_Enabled: 1
+--- !u!114 &3016025498493176475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5586226384642469347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b74396002e72941aa2829b83312363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Metal: 2
+  Wood: 4
+  Cloth: 4
+  paper: 0
+  nail: 4
+--- !u!65 &6583259215863411490
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5586226384642469347}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9007552, y: 1.9729207, z: 2.6408858}
+  m_Center: {x: -0.20971048, y: 0.48646033, z: 0.0135214925}
 --- !u!1 &5752760369268684450
 GameObject:
   m_ObjectHideFlags: 0

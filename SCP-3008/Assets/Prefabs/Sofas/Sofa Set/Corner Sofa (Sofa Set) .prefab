@@ -407,6 +407,8 @@ GameObject:
   - component: {fileID: 224668416023402291}
   - component: {fileID: -4679801020862323437}
   - component: {fileID: 5022626284494110102}
+  - component: {fileID: 2383414544350583827}
+  - component: {fileID: 6281092492504549330}
   m_Layer: 3
   m_Name: 'Corner Sofa (Sofa Set) '
   m_TagString: Moveable
@@ -468,3 +470,33 @@ LODGroup:
     - renderer: {fileID: 7027476221770313114}
     - renderer: {fileID: 198528449834545621}
   m_Enabled: 1
+--- !u!114 &2383414544350583827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529777388871312401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b74396002e72941aa2829b83312363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Metal: 2
+  Wood: 3
+  Cloth: 3
+  paper: 0
+  nail: 5
+--- !u!65 &6281092492504549330
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6529777388871312401}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.4153934, y: 2.233866, z: 2.531323}
+  m_Center: {x: -0.124004364, y: 0.6169336, z: 0.100568295}

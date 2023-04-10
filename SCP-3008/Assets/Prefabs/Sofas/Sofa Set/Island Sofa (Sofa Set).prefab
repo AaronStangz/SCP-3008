@@ -234,6 +234,8 @@ GameObject:
   - component: {fileID: 3943558479308605613}
   - component: {fileID: 5283946995258898625}
   - component: {fileID: 1920140971589782140}
+  - component: {fileID: 4581079072277425267}
+  - component: {fileID: 2144309888971335510}
   m_Layer: 3
   m_Name: Island Sofa (Sofa Set)
   m_TagString: Moveable
@@ -292,6 +294,36 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2886981512012363585}
   m_Enabled: 1
+--- !u!114 &4581079072277425267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6140938709163242444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b74396002e72941aa2829b83312363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Metal: 2
+  Wood: 3
+  Cloth: 1
+  paper: 0
+  nail: 6
+--- !u!65 &2144309888971335510
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6140938709163242444}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8126059, y: 1.6568536, z: 2.7385712}
+  m_Center: {x: -0.09988499, y: 0.3284269, z: 0.0010509491}
 --- !u!1 &6410652596186907568
 GameObject:
   m_ObjectHideFlags: 0

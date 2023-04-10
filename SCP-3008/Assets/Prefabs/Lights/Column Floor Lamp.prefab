@@ -194,6 +194,8 @@ GameObject:
   - component: {fileID: 5557727796658826222}
   - component: {fileID: 6220063507361944412}
   - component: {fileID: 9096387404559779516}
+  - component: {fileID: 5619014451499525432}
+  - component: {fileID: 7673197728684586709}
   m_Layer: 0
   m_Name: Column Floor Lamp
   m_TagString: Untagged
@@ -254,6 +256,36 @@ LODGroup:
     - renderer: {fileID: 8479144593786788554}
     - renderer: {fileID: 2091699986403895679}
   m_Enabled: 1
+--- !u!114 &5619014451499525432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5074100273901318484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b74396002e72941aa2829b83312363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Metal: 4
+  Wood: 0
+  Cloth: 0
+  paper: 0
+  nail: 8
+--- !u!65 &7673197728684586709
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5074100273901318484}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9062552, y: 9.171171, z: 3.163025}
+  m_Center: {x: -0.0379169, y: 4.0855856, z: 0.054023743}
 --- !u!1 &5535330507614512256
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +331,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 13262.911
+  m_Intensity: 265.25824
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -342,7 +374,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 3, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 2710
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
@@ -361,7 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 500000
+  m_Intensity: 10000
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0

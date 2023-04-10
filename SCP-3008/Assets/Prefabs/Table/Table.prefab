@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6861481212241365117}
   - component: {fileID: 3118823080009582058}
   - component: {fileID: 6421934322053447089}
+  - component: {fileID: 4508136181525054215}
+  - component: {fileID: 4672999026119493565}
   m_Layer: 3
   m_Name: Table
   m_TagString: Moveable
@@ -69,6 +71,36 @@ LODGroup:
     renderers:
     - renderer: {fileID: 3624234408638265786}
   m_Enabled: 1
+--- !u!114 &4508136181525054215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636349614304265554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b74396002e72941aa2829b83312363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Metal: 0
+  Wood: 7
+  Cloth: 0
+  paper: 0
+  nail: 5
+--- !u!65 &4672999026119493565
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636349614304265554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9627995, y: 2.2144651, z: 2.1489933}
+  m_Center: {x: 0.043675184, y: 0.6072327, z: 0.13639486}
 --- !u!1 &2975508873299761263
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2975508873299761263}
   m_LocalRotation: {x: -0.00000009735359, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:

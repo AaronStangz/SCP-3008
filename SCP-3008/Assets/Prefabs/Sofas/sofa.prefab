@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 763551896088852978}
   - component: {fileID: 4571589963908375283}
   - component: {fileID: 3720233132429925773}
+  - component: {fileID: 1662064782522689139}
+  - component: {fileID: 708656049571125934}
   m_Layer: 3
   m_Name: sofa
   m_TagString: Untagged
@@ -75,6 +77,36 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2500711302605831909}
   m_Enabled: 1
+--- !u!114 &1662064782522689139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131588228615758664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b74396002e72941aa2829b83312363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Metal: 0
+  Wood: 5
+  Cloth: 8
+  paper: 0
+  nail: 3
+--- !u!65 &708656049571125934
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131588228615758664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.0266469, y: 1.483865, z: 2.1884096}
+  m_Center: {x: -0.011005044, y: 0.24193287, z: -0.010751843}
 --- !u!1 &2327951261016248834
 GameObject:
   m_ObjectHideFlags: 0
