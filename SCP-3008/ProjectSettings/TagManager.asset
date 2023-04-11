@@ -8,7 +8,7 @@ TagManager:
   - Map
   - Trash
   - Craft
-  - Axe
+  - Tool
   layers:
   - Default
   - TransparentFX

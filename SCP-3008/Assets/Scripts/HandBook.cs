@@ -10,6 +10,7 @@ public class HandBook : MonoBehaviour
     public GameObject handBook;
     public GameObject puaseMenu;
     public GameObject crafting;
+    public GameObject HungerThirstHealth;
 
     [Header("Player")]
     public GameObject player;
@@ -36,15 +37,22 @@ public class HandBook : MonoBehaviour
     public GameObject Page1;
     public GameObject Page2;
 
-    [Header("Crafting")]
+    [Header("Crafting Text")]
     public GameObject paperToWoodText;
     public GameObject netalToNailsText;
-    public GameObject craftingAxeText;
+    public GameObject craftingScrapAxeText;
+    public GameObject craftingWoodAxeText;
+    public GameObject craftingMetalAxeText;
+
+    [Header("InvButtons")]
+    public GameObject ScrapAxeButton;
+    public GameObject WoodAxeButton;
+    public GameObject MetalAxeButton;
 
     [Header("Items")]
-    public GameObject axeButton;
-    public GameObject axe;
-
+    public GameObject ScrapAxeItem;
+    public GameObject WoodAxeItem;
+    public GameObject MetalAxeItem;
 
     [Header("Mats")]
     public GameObject metalText;
@@ -77,71 +85,91 @@ public class HandBook : MonoBehaviour
             TextUpdate();
             player.GetComponent<puase>().isMenuOpen = true;
             handBook.SetActive(true);
+            ScrapAxeItem.SetActive(false);
+            WoodAxeItem.SetActive(false);
+            MetalAxeItem.SetActive(false);
+            HungerThirstHealth.SetActive(false);
         }
     }
 
 
     public void ScrapWall()
     {
-        if (woodCount >= 5 && nailCount >= 10)
+        if (woodCount >= 15 && nailCount >= 30)
         {
             Debug.Log("placed");
             Instantiate(scrapwall);
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
-            woodCount -= 5;
-            nailCount -= 10;
+            woodCount -= 15;
+            nailCount -= 36;
             cam.enabled = true;
             player.GetComponent<puase>().isMenuOpen = true;
             handBook.SetActive(false);
+            ScrapAxeItem.SetActive(false);
+            WoodAxeItem.SetActive(false);
+            MetalAxeItem.SetActive(false);
+            HungerThirstHealth.SetActive(true);
         }
     }
 
     public void ScrapDoor()
     {
-        if (woodCount >= 5 && nailCount >= 10)
+        if (woodCount >= 19 && nailCount >= 38)
         {
             Debug.Log("placed");
             Instantiate(scrapdoor);
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
-            woodCount -= 5;
-            nailCount -= 10;
+            woodCount -= 19;
+            nailCount -= 38;
             cam.enabled = true;
             player.GetComponent<puase>().isMenuOpen = true;
             handBook.SetActive(false);
+            ScrapAxeItem.SetActive(false);
+            WoodAxeItem.SetActive(false);
+            MetalAxeItem.SetActive(false);
+            HungerThirstHealth.SetActive(true);
         }
     }
 
     public void ScrapWindow()
     {
-        if (woodCount >= 5 && nailCount >= 10)
+        if (woodCount >= 23 && nailCount >= 46)
         {
             Debug.Log("placed");
             Instantiate(scrapwindow);
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
-            woodCount -= 5;
-            nailCount -= 10;
+            woodCount -= 23;
+            nailCount -= 46;
             cam.enabled = true;
             player.GetComponent<puase>().isMenuOpen = true;
             handBook.SetActive(false);
+            ScrapAxeItem.SetActive(false);
+            WoodAxeItem.SetActive(false);
+            MetalAxeItem.SetActive(false);
+            HungerThirstHealth.SetActive(true);
         }
     }
 
     public void WoodWall()
     {
-        if (woodCount >= 10 && nailCount >= 20)
+        if (woodCount >= 30 && nailCount >= 60)
         {
             Debug.Log("placed");
             Instantiate(woodwall);
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
-            woodCount -= 5;
-            nailCount -= 10;
+            woodCount -= 30;
+            nailCount -= 60;
             cam.enabled = true;
             player.GetComponent<puase>().isMenuOpen = true;
             handBook.SetActive(false);
+            ScrapAxeItem.SetActive(false);
+            WoodAxeItem.SetActive(false);
+            MetalAxeItem.SetActive(false);
+            HungerThirstHealth.SetActive(true);
         }
     }
 
@@ -158,22 +186,30 @@ public class HandBook : MonoBehaviour
             cam.enabled = true;
             player.GetComponent<puase>().isMenuOpen = true;
             handBook.SetActive(false);
+            ScrapAxeItem.SetActive(false);
+            WoodAxeItem.SetActive(false);
+            MetalAxeItem.SetActive(false);
+            HungerThirstHealth.SetActive(true);
         }
     }
 
     public void WallWindow()
     {
-        if (woodCount >= 10 && nailCount >= 20)
+        if (woodCount >= 46 && nailCount >= 96)
         {
             Debug.Log("placed");
             Instantiate(woodwindow);
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
-            woodCount -= 5;
-            nailCount -= 10;
+            woodCount -= 46;
+            nailCount -= 96;
             cam.enabled = true;
             player.GetComponent<puase>().isMenuOpen = true;
             handBook.SetActive(false);
+            ScrapAxeItem.SetActive(false);
+            WoodAxeItem.SetActive(false);
+            MetalAxeItem.SetActive(false);
+            HungerThirstHealth.SetActive(true);
         }
     }
     public void MetalToNails()
@@ -196,35 +232,85 @@ public class HandBook : MonoBehaviour
         }
     }
 
-    public void CraftAxe()
+    public void CraftScrapAxe()
     {
-        if (metalCount >= 5 && woodCount >= 2 && nailCount >= 4)
+        if (woodCount >= 2 && nailCount >= 4)
         {
-            Debug.Log("CraftingAxe");
-            axeButton.SetActive(true);
+            Debug.Log("CraftingScrapAxe");
+            woodCount -= 2;
+            nailCount -= 4;
+            ScrapAxeButton.SetActive(true);
+            NextPage2();
+
+
+        }
+    }
+    public void CraftWoodAxe()
+    {
+        if (woodCount >= 4 && nailCount >= 8)
+        {
+            Debug.Log("CraftingWoodAxe");
+            woodCount -= 4;
+            nailCount -= 8;
+            WoodAxeButton.SetActive(true);
             NextPage2();
 
 
         }
     }
 
-    public void Axe()
+    public void CraftMetalAxe()
     {
-        axe.SetActive(true);
+        if (metalCount >= 20 && woodCount >= 8 && nailCount >= 16)
+        {
+            Debug.Log("CraftingMetalAxe");
+            metalCount -= 20;
+            woodCount -= 8;
+            nailCount -= 16;
+            MetalAxeButton.SetActive(true);
+            NextPage2();
+
+
+        }
+    }
+
+
+    public void ScrapAxeHold()
+    {
+        ScrapAxeItem.SetActive(true);
+        WoodAxeItem.SetActive(false);
+        MetalAxeItem.SetActive(false);
+    }
+
+    public void WoodAxeHold()
+    {
+        ScrapAxeItem.SetActive(false);
+        WoodAxeItem.SetActive(true);
+        MetalAxeItem.SetActive(false);
+    }
+
+    public void MetalAxeHold()
+    {
+        ScrapAxeItem.SetActive(false);
+        WoodAxeItem.SetActive(false);
+        MetalAxeItem.SetActive(true);
     }
 
     void TextUpdate()
     {
-        scrapwallText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 5 )" + "( Nails: " + nailCount + " / 10 )";
-        scrapdoorText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 5 )" + "( Nails: " + nailCount + " / 10 )";
-        scrapwindowText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 5 )" + "( Nails: " + nailCount + " / 10 )";
-        woodwallText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 10 )" + "( Nails: " + nailCount + " / 20 )";
-        wooddoorText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 10 )" + "( Nails: " + nailCount + " / 20 )";
-        woodwindowText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 10 )" + "( Nails: " + nailCount + " / 20 )";
+        scrapwallText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 15 )" + "( Nails: " + nailCount + " / 30 )";
+        scrapdoorText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 19 )" + "( Nails: " + nailCount + " / 38 )";
+        scrapwindowText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 23 )" + "( Nails: " + nailCount + " / 46 )";
+
+        woodwallText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 30 )" + "( Nails: " + nailCount + " / 60 )";
+        wooddoorText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 38 )" + "( Nails: " + nailCount + " / 76 )";
+        woodwindowText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 46 )" + "( Nails: " + nailCount + " / 96 )";
 
         netalToNailsText.GetComponent<TextMeshProUGUI>().text = "( Metal: " + metalCount + " / 1 )";
         paperToWoodText.GetComponent<TextMeshProUGUI>().text = "( Paper: " + paperCount + " / 10 )";
-        craftingAxeText.GetComponent<TextMeshProUGUI>().text = "( Metal: " + metalCount + " / 5 )" + "( Wood: " + woodCount + " / 5 )" + "( Nails: " + nailCount + " / 4 )";
+        craftingScrapAxeText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 2 )" + "( Nails: " + nailCount + " / 4 )";
+        craftingWoodAxeText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 4 )" + "( Nails: " + nailCount + " / 8 )";
+        craftingMetalAxeText.GetComponent<TextMeshProUGUI>().text = "( Metal: " + metalCount + " / 20 )" + "( Wood: " + woodCount + " / 8 )" + "( Nails: " + nailCount + " / 16 )";
 
         metalText.GetComponent<TextMeshProUGUI>().text = "Metal: " + metalCount;
         woodText.GetComponent<TextMeshProUGUI>().text = "Wood: " + woodCount;
@@ -239,6 +325,7 @@ public class HandBook : MonoBehaviour
         {
             player.GetComponent<puase>().isMenuOpen = false;
             cam.enabled = true;
+            HungerThirstHealth.SetActive(true);
         }
 
         if (Input.GetKeyUp(KeyCode.Escape))
@@ -246,6 +333,7 @@ public class HandBook : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             crafting.SetActive(false);
             handBook.SetActive(false);
+            HungerThirstHealth.SetActive(true);
         }
     }
     public void NextPage1()
