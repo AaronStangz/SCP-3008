@@ -49,10 +49,10 @@ public class HandBook : MonoBehaviour
     public GameObject WoodAxeButton;
     public GameObject MetalAxeButton;
 
-    [Header("InvFI")]
-    public GameObject ScrapAxeFI;
-    public GameObject WoodAxeFI;
-    public GameObject MetalAxeFI;
+    [Header("Items")]
+    public GameObject ScrapAxeItem;
+    public GameObject WoodAxeItem;
+    public GameObject MetalAxeItem;
 
     [Header("Mats")]
     public GameObject metalText;
@@ -85,6 +85,9 @@ public class HandBook : MonoBehaviour
             TextUpdate();
             player.GetComponent<puase>().isMenuOpen = true;
             handBook.SetActive(true);
+            ScrapAxeItem.SetActive(false);
+            WoodAxeItem.SetActive(false);
+            MetalAxeItem.SetActive(false);
             HungerThirstHealth.SetActive(false);
         }
     }
@@ -103,6 +106,9 @@ public class HandBook : MonoBehaviour
             cam.enabled = true;
             player.GetComponent<puase>().isMenuOpen = true;
             handBook.SetActive(false);
+            ScrapAxeItem.SetActive(false);
+            WoodAxeItem.SetActive(false);
+            MetalAxeItem.SetActive(false);
             HungerThirstHealth.SetActive(true);
         }
     }
@@ -120,6 +126,9 @@ public class HandBook : MonoBehaviour
             cam.enabled = true;
             player.GetComponent<puase>().isMenuOpen = true;
             handBook.SetActive(false);
+            ScrapAxeItem.SetActive(false);
+            WoodAxeItem.SetActive(false);
+            MetalAxeItem.SetActive(false);
             HungerThirstHealth.SetActive(true);
         }
     }
@@ -137,6 +146,9 @@ public class HandBook : MonoBehaviour
             cam.enabled = true;
             player.GetComponent<puase>().isMenuOpen = true;
             handBook.SetActive(false);
+            ScrapAxeItem.SetActive(false);
+            WoodAxeItem.SetActive(false);
+            MetalAxeItem.SetActive(false);
             HungerThirstHealth.SetActive(true);
         }
     }
@@ -154,6 +166,9 @@ public class HandBook : MonoBehaviour
             cam.enabled = true;
             player.GetComponent<puase>().isMenuOpen = true;
             handBook.SetActive(false);
+            ScrapAxeItem.SetActive(false);
+            WoodAxeItem.SetActive(false);
+            MetalAxeItem.SetActive(false);
             HungerThirstHealth.SetActive(true);
         }
     }
@@ -171,6 +186,9 @@ public class HandBook : MonoBehaviour
             cam.enabled = true;
             player.GetComponent<puase>().isMenuOpen = true;
             handBook.SetActive(false);
+            ScrapAxeItem.SetActive(false);
+            WoodAxeItem.SetActive(false);
+            MetalAxeItem.SetActive(false);
             HungerThirstHealth.SetActive(true);
         }
     }
@@ -188,6 +206,9 @@ public class HandBook : MonoBehaviour
             cam.enabled = true;
             player.GetComponent<puase>().isMenuOpen = true;
             handBook.SetActive(false);
+            ScrapAxeItem.SetActive(false);
+            WoodAxeItem.SetActive(false);
+            MetalAxeItem.SetActive(false);
             HungerThirstHealth.SetActive(true);
         }
     }
@@ -219,7 +240,8 @@ public class HandBook : MonoBehaviour
             woodCount -= 2;
             nailCount -= 4;
             ScrapAxeButton.SetActive(true);
-            ScrapAxeFI.SetActive(true);
+            NextPage2();
+
 
         }
     }
@@ -231,7 +253,7 @@ public class HandBook : MonoBehaviour
             woodCount -= 4;
             nailCount -= 8;
             WoodAxeButton.SetActive(true);
-            WoodAxeFI.SetActive(true);
+            NextPage2();
 
 
         }
@@ -246,10 +268,32 @@ public class HandBook : MonoBehaviour
             woodCount -= 8;
             nailCount -= 16;
             MetalAxeButton.SetActive(true);
-            MetalAxeFI.SetActive(true);
+            NextPage2();
 
 
         }
+    }
+
+
+    public void ScrapAxeHold()
+    {
+        ScrapAxeItem.SetActive(true);
+        WoodAxeItem.SetActive(false);
+        MetalAxeItem.SetActive(false);
+    }
+
+    public void WoodAxeHold()
+    {
+        ScrapAxeItem.SetActive(false);
+        WoodAxeItem.SetActive(true);
+        MetalAxeItem.SetActive(false);
+    }
+
+    public void MetalAxeHold()
+    {
+        ScrapAxeItem.SetActive(false);
+        WoodAxeItem.SetActive(false);
+        MetalAxeItem.SetActive(true);
     }
 
     void TextUpdate()
@@ -267,6 +311,12 @@ public class HandBook : MonoBehaviour
         craftingScrapAxeText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 2 )" + "( Nails: " + nailCount + " / 4 )";
         craftingWoodAxeText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 4 )" + "( Nails: " + nailCount + " / 8 )";
         craftingMetalAxeText.GetComponent<TextMeshProUGUI>().text = "( Metal: " + metalCount + " / 20 )" + "( Wood: " + woodCount + " / 8 )" + "( Nails: " + nailCount + " / 16 )";
+
+        metalText.GetComponent<TextMeshProUGUI>().text = "Metal: " + metalCount;
+        woodText.GetComponent<TextMeshProUGUI>().text = "Wood: " + woodCount;
+        clothText.GetComponent<TextMeshProUGUI>().text = "Cloth: " + clothCount;
+        paperText.GetComponent<TextMeshProUGUI>().text = "Paper: " + paperCount;
+        nailText.GetComponent<TextMeshProUGUI>().text = "Nails: " + nailCount;
     }
 
     void Escape()

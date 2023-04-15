@@ -9,7 +9,6 @@ TagManager:
   - Trash
   - Craft
   - Tool
-  - InvCamera
   layers:
   - Default
   - TransparentFX
