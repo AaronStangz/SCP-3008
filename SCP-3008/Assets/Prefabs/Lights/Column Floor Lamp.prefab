@@ -250,11 +250,15 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.05313685
+  - screenRelativeHeight: 0.19685727
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 8479144593786788554}
     - renderer: {fileID: 2091699986403895679}
+  - screenRelativeHeight: 0.05313685
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 8479144593786788554}
   m_Enabled: 1
 --- !u!114 &5619014451499525432
 MonoBehaviour:
@@ -273,6 +277,7 @@ MonoBehaviour:
   Cloth: 0
   paper: 0
   nail: 8
+  breakTime: 1
 --- !u!65 &7673197728684586709
 BoxCollider:
   m_ObjectHideFlags: 0
