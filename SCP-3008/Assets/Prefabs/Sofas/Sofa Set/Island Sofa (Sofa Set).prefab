@@ -306,11 +306,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b74396002e72941aa2829b83312363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Metal: 2
-  Wood: 3
+  Metal: 1
+  Wood: 1
   Cloth: 1
-  paper: 0
-  nail: 6
+  Paper: 0
+  Nail: 0
+  ScrapWood: 2
+  ScrapMetal: 2
+  breakTime: 1
 --- !u!65 &2144309888971335510
 BoxCollider:
   m_ObjectHideFlags: 0
