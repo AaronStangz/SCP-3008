@@ -13,8 +13,12 @@ public class Inventory : MonoBehaviour
     HandBook nailCount;
     HandBook scrapWoodCount;
     HandBook scrapMatelCount;
+    HandBook matelWireCount;
 
     HandBook HandBookOpen;
+
+    [SerializeField]
+    private PlayerMovement Move;
 
     [Header("Mat Text")]
     public GameObject MetalText;
@@ -24,6 +28,7 @@ public class Inventory : MonoBehaviour
     public GameObject NailText;
     public GameObject ScrapWoodText;
     public GameObject ScrapMetalText;
+    public GameObject MetalWireText;
 
     [Header("Player & Cameras")]
     public GameObject PlayerCam;
@@ -47,7 +52,8 @@ public class Inventory : MonoBehaviour
     public GameObject clothItem;
     public GameObject nailsItem;
     public GameObject scrapwoodItem;
-    public GameObject scrapmetaItem;
+    public GameObject scrapmetalItem;
+    public GameObject MetalWireItem;
 
     [Header("HoldableItems")]
     public GameObject ScrapAxeItemHoldable;
@@ -66,6 +72,7 @@ public class Inventory : MonoBehaviour
         nailCount = player.GetComponent<HandBook>();
         scrapWoodCount = player.GetComponent<HandBook>();
         scrapMatelCount = player.GetComponent<HandBook>();
+        matelWireCount = player.GetComponent<HandBook>();
     }
 
     void Update()
@@ -85,6 +92,7 @@ public class Inventory : MonoBehaviour
 
         if (InvOpen == true)
         {
+            Move.enabled = false;
             ScrapAxeItem.SetActive(false);
             WoodAxeItem.SetActive(false);
             MetalAxeItem.SetActive(false);
@@ -180,50 +188,72 @@ public class Inventory : MonoBehaviour
         {
 
             ScrapMetalText.SetActive(true);
-            scrapmetaItem.SetActive(true);
+            scrapmetalItem.SetActive(true);
             ScrapMetalText.GetComponent<TextMeshProUGUI>().text = "( Scrap Matel: " + scrapMatelCount.scrapMatelCount + " )";
         }
         else
         {
             ScrapMetalText.SetActive(false);
-            scrapmetaItem.SetActive(false);
+            scrapmetalItem.SetActive(false);
+        }
+
+        if (matelWireCount.matelWireCount >= 1)
+        {
+
+            MetalWireText.SetActive(true);
+            MetalWireItem.SetActive(true);
+            MetalWireText.GetComponent<TextMeshProUGUI>().text = " Matel Wire: " + matelWireCount.matelWireCount + " )";
+        }
+        else
+        {
+            MetalWireText.SetActive(false);
+            MetalWireItem.SetActive(false);
         }
 
     }
 
     public void ScrapAxeHold() 
     {
+        ForceEscape();
+        Debug.Log("HoldingScrapAxe");
         ScrapAxeItemHoldable.SetActive(true);
         WoodAxeItemHoldable.SetActive(false);
         MetalAxeItemHoldable.SetActive(false);
-        Escape();
     }
     public void WoodAxeHold()
     {
+        ForceEscape();
+        Debug.Log("HoldingWoodAxe");
         ScrapAxeItemHoldable.SetActive(false);
         WoodAxeItemHoldable.SetActive(true);
         MetalAxeItemHoldable.SetActive(false);
-        Escape();
     }
     public void MetalAxeHold()
     {
+        ForceEscape();
+        Debug.Log("HoldingMetalAxe");
         ScrapAxeItemHoldable.SetActive(false);
         WoodAxeItemHoldable.SetActive(false);
         MetalAxeItemHoldable.SetActive(true);
-        Escape();
     }
 
 
     void Escape()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && InvOpen == true && HandBookOpen == false)
+        if (Input.GetKeyDown(KeyCode.Escape) && InvOpen == true)
         {
+            ForceEscape();
+        }
+    }
+
+    void ForceEscape()
+    {
+            Move.enabled = true;
             Inv.SetActive(false);
             InvCam.SetActive(false);
             PlayerCam.SetActive(true);
             HungerThirstHealth.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;
             InvOpen = false;
-        }
     }
 }

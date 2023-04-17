@@ -178,10 +178,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Metal: 0
-  Wood: 4
+  Wood: 0
   Cloth: 0
   Paper: 0
-  Nail: 0
-  ScrapWood: 23
+  Nail: 4
+  ScrapWood: 11
   ScrapMetal: 0
+  MetalWire: 0
   breakTime: 1

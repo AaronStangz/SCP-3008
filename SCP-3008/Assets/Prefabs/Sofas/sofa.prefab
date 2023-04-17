@@ -90,12 +90,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Metal: 0
-  Wood: 2
+  Wood: 0
   Cloth: 8
   Paper: 0
   Nail: 0
-  ScrapWood: 3
+  ScrapWood: 5
   ScrapMetal: 2
+  MetalWire: 0
   breakTime: 1
 --- !u!65 &708656049571125934
 BoxCollider:

@@ -14,6 +14,7 @@ public class BreakTimer : MonoBehaviour
     HandBook nailCount;
     HandBook scrapWoodCount;
     HandBook scrapMatelCount;
+    HandBook matelWireCount;
 
     [Header("Slider")]
     public Slider breakingBarSlider;
@@ -31,6 +32,7 @@ public class BreakTimer : MonoBehaviour
         nailCount = player.GetComponent<HandBook>();
         scrapWoodCount = player.GetComponent<HandBook>();
         scrapMatelCount = player.GetComponent<HandBook>();
+        matelWireCount = player.GetComponent<HandBook>();
     }
     public void BreakObject(BreakingDrops drops)
     {
@@ -57,6 +59,7 @@ public class BreakTimer : MonoBehaviour
         nailCount.nailCount += drops.Nail;
         scrapWoodCount.scrapWoodCount += drops.ScrapWood;
         scrapMatelCount.scrapMatelCount += drops.ScrapMetal;
+        matelWireCount.matelWireCount += drops.MetalWire;
         breakingBarGrafic.SetActive(false);
         Destroy(drops.gameObject);
 

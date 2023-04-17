@@ -48,6 +48,7 @@ public class HandBook : MonoBehaviour
     public GameObject craftingScrapAxeText;
     public GameObject craftingWoodAxeText;
     public GameObject craftingMetalAxeText;
+    public GameObject metalToWireText;
 
     [Header("InvButtons")]
     public GameObject ScrapAxeButton;
@@ -67,6 +68,7 @@ public class HandBook : MonoBehaviour
     public int nailCount;
     public int scrapWoodCount;
     public int scrapMatelCount;
+    public int matelWireCount;
 
     public bool HandBookOpen = false;
 
@@ -86,7 +88,6 @@ public class HandBook : MonoBehaviour
         {
             cam.enabled = false;
             Cursor.lockState = CursorLockMode.None;
-            TextUpdate();
             handBook.SetActive(true);
             HungerThirstHealth.SetActive(false);
             HandBookOpen = true;
@@ -95,8 +96,10 @@ public class HandBook : MonoBehaviour
         if (HandBookOpen == false)
         {
             cam.enabled = true;
-            HungerThirstHealth.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;
+            handBook.SetActive(false);
+            HungerThirstHealth.SetActive(true);
+            HandBookOpen = false;
         }
 
         if(HandBookOpen == true)
@@ -224,6 +227,16 @@ public class HandBook : MonoBehaviour
         }
     }
 
+    public void MetalToWire()
+    {
+        if (metalCount >= 1)
+        {
+            Debug.Log("MetalToWire");
+            metalCount -= 1;
+            matelWireCount += 5;
+        }
+    }
+
     public void CraftScrapAxe()
     {
         if (scrapWoodCount >= 4 && nailCount >= 8)
@@ -258,15 +271,16 @@ public class HandBook : MonoBehaviour
     }
     void TextUpdate()
     {
-        scrapwallText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + scrapWoodCount + " / 15 )" + "( Nails: " + nailCount + " / 30 )" + "( Wood: " + woodCount + " / 4 )";
-        scrapdoorText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + scrapWoodCount + " / 19 )" + "( Nails: " + nailCount + " / 38 )" + "( Wood: " + woodCount + " / 4 )";
-        scrapwindowText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + scrapWoodCount + " / 23 )" + "( Nails: " + nailCount + " / 46 )" + "( Wood: " + woodCount + " / 4 )";
+        scrapwallText.GetComponent<TextMeshProUGUI>().text = "( Scrap Wood: " + scrapWoodCount + " / 15 )" + "( Nails: " + nailCount + " / 30 )" + "( Wood: " + woodCount + " / 4 )";
+        scrapdoorText.GetComponent<TextMeshProUGUI>().text = "( Scrap Wood: " + scrapWoodCount + " / 19 )" + "( Nails: " + nailCount + " / 38 )" + "( Wood: " + woodCount + " / 4 )";
+        scrapwindowText.GetComponent<TextMeshProUGUI>().text = "( Scrap Wood: " + scrapWoodCount + " / 23 )" + "( Nails: " + nailCount + " / 46 )" + "( Wood: " + woodCount + " / 4 )";
 
         woodwallText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 30 )" + "( Nails: " + nailCount + " / 60 )";
         wooddoorText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 38 )" + "( Nails: " + nailCount + " / 76 )";
         woodwindowText.GetComponent<TextMeshProUGUI>().text = "( Wood: " + woodCount + " / 46 )" + "( Nails: " + nailCount + " / 96 )";
 
         netalToNailsText.GetComponent<TextMeshProUGUI>().text = "( Metal: " + metalCount + " / 1 )";
+        metalToWireText.GetComponent<TextMeshProUGUI>().text = "( Metal: " + metalCount + " / 1 )";
         paperToWoodText.GetComponent<TextMeshProUGUI>().text = "( Paper: " + paperCount + " / 10 )";
         scrapMetalToMetalText.GetComponent<TextMeshProUGUI>().text = "( Scrap Metal: " + scrapMatelCount + " / 4 )";
         scrapWoodToWoodText.GetComponent<TextMeshProUGUI>().text = "( Scrap Wood: " + scrapWoodCount + " / 4 )";

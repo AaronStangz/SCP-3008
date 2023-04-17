@@ -14,6 +14,7 @@ public class BreakingDrops : MonoBehaviour
     public int Nail;
     public int ScrapWood;
     public int ScrapMetal;
+    public int MetalWire;
 
     public float breakTime = 1f;
 

@@ -13,6 +13,7 @@ public class Drops : MonoBehaviour
     HandBook nailCount;
     HandBook scrapWoodCount;
     HandBook scrapMatelCount;
+    HandBook matelWireCount;
     [Header("How Much To Give")]
     public int Metal;
     public int Wood;
@@ -21,6 +22,7 @@ public class Drops : MonoBehaviour
     public int nail;
     public int ScrapWood;
     public int ScrapMetal;
+    public int MetalWire;
 
     GameObject player;
 
@@ -34,6 +36,7 @@ public class Drops : MonoBehaviour
         nailCount = player.GetComponent<HandBook>();
         scrapWoodCount = player.GetComponent<HandBook>();
         scrapMatelCount = player.GetComponent<HandBook>();
+        matelWireCount = player.GetComponent<HandBook>();
     }
     void OnTriggerStay(Collider collision)
     {
@@ -55,6 +58,7 @@ public class Drops : MonoBehaviour
             nailCount.nailCount += nail;
             scrapWoodCount.scrapWoodCount += ScrapWood;
             scrapMatelCount.scrapMatelCount += ScrapMetal;
+            matelWireCount.matelWireCount += MetalWire;
 
             Destroy(gameObject);
         }
