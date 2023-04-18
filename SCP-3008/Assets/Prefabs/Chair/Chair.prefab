@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 8454981318347771773}
   - component: {fileID: 4826164604128313560}
   - component: {fileID: 7285993424827790354}
+  - component: {fileID: 9079646321896881967}
   m_Layer: 3
   m_Name: Chair
   m_TagString: Untagged
@@ -467,3 +468,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &9079646321896881967
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9087683621658990023}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.09200001, y: 0.21100001, z: 0.112}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0.003, y: 0.032, z: -0.006}
+  m_TimeToStationary: 0.5

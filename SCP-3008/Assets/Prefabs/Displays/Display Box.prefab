@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3241803382594636684}
   - component: {fileID: 1968891715594585129}
   - component: {fileID: 4374719120057921763}
+  - component: {fileID: 5152343129380340475}
   m_Layer: 3
   m_Name: DisplayBox
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &5152343129380340475
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861724944092811574}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 0aee89e7e8dbf054cadcd7d5744d8b18, type: 3}
 --- !u!1 &4205971904317995514
 GameObject:
   m_ObjectHideFlags: 0

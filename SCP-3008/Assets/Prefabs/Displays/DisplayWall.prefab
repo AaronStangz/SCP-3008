@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2456815978641188105}
   - component: {fileID: 1564867318023350956}
   - component: {fileID: 3626367198864776806}
+  - component: {fileID: 9016816593341893329}
+  - component: {fileID: 5851278494100592556}
   m_Layer: 0
   m_Name: DisplayWall
   m_TagString: Untagged
@@ -83,6 +85,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &9016816593341893329
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2977879571041959859}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.010000001, y: 0.00001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: -0.010000001, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!64 &5851278494100592556
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2977879571041959859}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: 06bc6fee70b1a4146b79584b1a368970, type: 3}
 --- !u!1 &3342517297813136907
 GameObject:
   m_ObjectHideFlags: 0

@@ -638,6 +638,7 @@ GameObject:
   - component: {fileID: 4781067295253131934}
   - component: {fileID: 1169564319993177903}
   - component: {fileID: 4383399852370801291}
+  - component: {fileID: 7405987130400611181}
   m_Layer: 3
   m_Name: End Sofa
   m_TagString: Untagged
@@ -720,3 +721,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &7405987130400611181
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7870463375451819195}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.012, y: 0.010000001, z: 0.007}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: -0.002, y: 0, z: 0.004}
+  m_TimeToStationary: 0.5

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6421934322053447089}
   - component: {fileID: 4508136181525054215}
   - component: {fileID: 4672999026119493565}
+  - component: {fileID: 3793936698268606825}
   m_Layer: 3
   m_Name: Table
   m_TagString: Moveable
@@ -105,6 +106,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.9627995, y: 2.2144651, z: 2.1489933}
   m_Center: {x: 0.043675184, y: 0.6072327, z: 0.13639486}
+--- !u!208 &3793936698268606825
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636349614304265554}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &2975508873299761263
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,6 +133,7 @@ GameObject:
   - component: {fileID: 2450223328602768085}
   - component: {fileID: 1562514565343825264}
   - component: {fileID: 3624234408638265786}
+  - component: {fileID: 1880099501303874145}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -195,6 +213,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!208 &1880099501303874145
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2975508873299761263}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.39400002, y: 0.158, z: 0.19700001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: -0.013, y: 0.008, z: 0.029000001}
+  m_TimeToStationary: 0.5
 --- !u!1 &3277413501147408478
 GameObject:
   m_ObjectHideFlags: 0

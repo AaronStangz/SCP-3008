@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 89343237214303753}
   - component: {fileID: 6017864191439811315}
   - component: {fileID: 7286842008933158829}
+  - component: {fileID: 5051198809500342941}
   m_Layer: 3
   m_Name: sofa (1)
   m_TagString: Untagged
@@ -281,6 +282,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.59, y: 1.2, z: 0.4}
   m_Center: {x: 0, y: 0.3, z: 0.25}
+--- !u!208 &5051198809500342941
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158146122490076976}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.2950001, y: 0.87500006, z: 0.4}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: 0.4}
+  m_TimeToStationary: 0.5
 --- !u!1 &4999068414210000731
 GameObject:
   m_ObjectHideFlags: 0
