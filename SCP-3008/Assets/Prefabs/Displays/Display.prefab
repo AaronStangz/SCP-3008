@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4653525559178127865}
   - component: {fileID: 8311035519724841972}
+  - component: {fileID: 2567677931012026018}
   m_Layer: 0
   m_Name: Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4653525559178127865
 Transform:
@@ -53,6 +54,29 @@ MonoBehaviour:
   plots:
   - {fileID: 8043371438341937219, guid: 43d889117438e6e42aaef1322d6116bc, type: 3}
   - {fileID: 626126330702268953, guid: a568a9efcc4e4474a88c53ed4e4f54b4, type: 3}
+  - {fileID: 6696369727353921944, guid: 9ffa8cc753e115f46937c279f506ecec, type: 3}
+  - {fileID: 2271019489693174128, guid: 3c13a7c10530ebf4aa51a5ffcc843ee3, type: 3}
+--- !u!205 &2567677931012026018
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677070335530111378}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.004716158, y: 2.0000002, z: 0.89100146}
+  m_Size: 6.4580026
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.051303487
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1038962932310846346}
+    - renderer: {fileID: 271374441992154334}
+    - renderer: {fileID: 8163202571523848233}
+  m_Enabled: 1
 --- !u!1 &1322742503955829735
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,12 +86,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5017510088721429365}
+  - component: {fileID: 3257567465955170649}
+  - component: {fileID: 6671559375245851283}
   m_Layer: 0
   m_Name: DisplayWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5017510088721429365
 Transform:
@@ -85,6 +111,40 @@ Transform:
   m_Father: {fileID: 4653525559178127865}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3257567465955170649
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322742503955829735}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.088519, y: 2.073969, z: 0.21712935}
+  m_Center: {x: 0.018662771, y: -0.038527012, z: 1.0013268}
+--- !u!114 &6671559375245851283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322742503955829735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b74396002e72941aa2829b83312363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Metal: 0
+  Wood: 0
+  Cloth: 0
+  Paper: 0
+  Nail: 0
+  ScrapWood: 0
+  ScrapMetal: 0
+  MetalWire: 2
+  breakTime: 1
 --- !u!1 &1543572730887015007
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +163,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2170752152735076581
 Transform:
@@ -218,7 +278,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1409399370814592945
 Transform:
@@ -324,12 +384,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5192360104590947361}
+  - component: {fileID: 3312347439261029904}
+  - component: {fileID: 5863870692833703854}
   m_Layer: 0
   m_Name: DisplayWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5192360104590947361
 Transform:
@@ -347,6 +409,40 @@ Transform:
   m_Father: {fileID: 4653525559178127865}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &3312347439261029904
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2302585821288027315}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1510582, y: 1.8002379, z: 0.27512884}
+  m_Center: {x: -0.01790007, y: 0.113197446, z: 1.0047033}
+--- !u!114 &5863870692833703854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2302585821288027315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b74396002e72941aa2829b83312363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Metal: 0
+  Wood: 0
+  Cloth: 0
+  Paper: 0
+  Nail: 0
+  ScrapWood: 0
+  ScrapMetal: 2
+  MetalWire: 0
+  breakTime: 1
 --- !u!1 &3173456111492549831
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +457,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3469720276803750650
 Transform:
@@ -396,7 +492,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6990336083492078406
 Transform:
@@ -502,12 +598,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4216320200954978518}
+  - component: {fileID: 1047487493926167389}
+  - component: {fileID: 975308326128646689}
   m_Layer: 0
   m_Name: DisplayWall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4216320200954978518
 Transform:
@@ -525,3 +623,37 @@ Transform:
   m_Father: {fileID: 4653525559178127865}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1047487493926167389
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7888606125972340804}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0003471, y: 1.9266361, z: 0.22988176}
+  m_Center: {x: -0.005835414, y: 0.012919724, z: 1.005734}
+--- !u!114 &975308326128646689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7888606125972340804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2b74396002e72941aa2829b83312363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Metal: 0
+  Wood: 0
+  Cloth: 0
+  Paper: 0
+  Nail: 0
+  ScrapWood: 0
+  ScrapMetal: 2
+  MetalWire: 0
+  breakTime: 1
